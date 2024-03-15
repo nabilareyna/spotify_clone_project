@@ -1,6 +1,6 @@
 # spotify_clone_project
 
-A new Flutter project.
+just some project for us to learn more about flutter and getx
 
 ## Getting Started
 
