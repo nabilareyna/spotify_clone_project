@@ -6,6 +6,8 @@ import 'package:spotify_clone_project/modules/startPage/ui/start.dart';
 class Routes {
   static const String start = "/";
 
+  static String getStartRoute() => start;
+
   static List<GetPage> routes = [
     GetPage(
         name: start,
