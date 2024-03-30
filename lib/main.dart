@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone_project/modules/startPage/ui/start.dart';
 import 'package:spotify_clone_project/routes/routes.dart';
 import 'package:get/get.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: Routes.getStartRoute(),
       getPages: Routes.routes,
+      home: StartPage(),
     );
   }
 }
