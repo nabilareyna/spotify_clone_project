@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone_project/Widgets/button_widget.dart';
 // import 'package:get/get.dart';
 import 'package:spotify_clone_project/utils/appThemes.dart';
 import '../../../Widgets/button.dart';
@@ -25,12 +26,7 @@ class StartPage extends StatelessWidget {
                 gradient: LinearGradient(
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
-                    colors: [
-                      Style.accentColor,
-                      Style.accentColor,
-                      Color.fromRGBO(33, 33, 33, 80),
-                      Colors.transparent
-                    ]),
+                    colors: [Style.accentColor, Style.accentColor, Color.fromRGBO(33, 33, 33, 80), Colors.transparent]),
               ),
               child: Center(
                 child: Column(
@@ -56,17 +52,24 @@ class StartPage extends StatelessWidget {
                     SizedBox(
                       height: 15,
                     ),
+                    ButtonLogin("Sign Up Free", Icons.abc, true, 0, Style.primaryColor),
+                    SizedBox(height: 10),
+                    //button widget kalo pake container, jangan lupa border circular radius, width, sm height disamain kayak yang di figma. urusan responsive apa engga nanti ae dulu
+                    InkWell(
+                      child: ButtonWidget(
+                          textButton: "Continue With Google", iconButton: Icons.alarm, colorButton: Colors.transparent, isCenter: false, sizeBox: 50),
+                      onTap: () {},
+                    ),
+                    SizedBox(height: 10),
+                    ButtonLogin("Continue With Facebook", Icons.account_balance, false, 40, Colors.transparent),
+                    SizedBox(height: 10),
                     ButtonLogin(
-                        "Sign Up Free", Icons.abc, true, 0, Style.primaryColor),
-                    SizedBox(height: 10),
-                    ButtonLogin("Continue With Google", Icons.access_alarm,
-                        false, 40, Colors.transparent),
-                    SizedBox(height: 10),
-                    ButtonLogin("Countine With Facebook", Icons.account_balance,
-                        false, 40, Colors.transparent),
-                    SizedBox(height: 10),
-                    ButtonLogin('Countine With Apple', Icons.apple, false, 40,
-                        Colors.transparent),
+                      'Continue With Apple',
+                      Icons.apple,
+                      false,
+                      40,
+                      Colors.transparent,
+                    ),
                     SizedBox(height: 10),
                     Text(
                       "Log in",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone_project/modules/startPage/ui/start.dart';
 import 'package:spotify_clone_project/routes/routes.dart';
 import 'package:get/get.dart';
+import 'package:spotify_clone_project/utils/appThemes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Spotify Clone App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Style.primaryColor),
         useMaterial3: true,
       ),
       initialRoute: Routes.getStartRoute(),
